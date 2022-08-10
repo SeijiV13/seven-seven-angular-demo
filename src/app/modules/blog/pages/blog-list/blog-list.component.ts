@@ -8,6 +8,9 @@ import { Blog } from '../../models/blog.interface';
 })
 export class BlogListComponent implements OnInit {
   passedBlog: Blog | undefined;
+  height = "100px";
+  width = "100px";
+  color = "red";
   // ngIf ngSwitch ngFor
   blogs: Blog[] = [
     {
@@ -37,14 +40,19 @@ export class BlogListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  executeAction(blog: Blog, i:  number) {
-    console.log(i)
+  executeAction(blog: Blog) {
     this.passedBlog = blog;
   }
 
   changeNum() {
     this.num++;
   } 
+
+  changeCss() {
+    this.width = "200px";
+    this.height ="200px";
+    this.color = "yellow";
+  }
 
 
 

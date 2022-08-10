@@ -1,12 +1,14 @@
 <div *ngFor="let data of blogs; let i = index">
-    <app-blog-item *ngIf="data.published && data.authorActive " 
-    [blogItem]="data" 
-    (actionEmitter)="executeAction($event, i)"></app-blog-item>
+    <div [ngClass]="{'card': data.published ? true : false}">
+        <app-blog-item 
+        [blogItem]="data" 
+        (actionEmitter)="executeAction($event)"></app-blog-item>
+    </div>
 </div>
-<!-- <app-blog-item></app-blog-item>
-<app-blog-item></app-blog-item> -->
-<!-- <app-blog-item (actionEmitter)="executeAction($event)"></app-blog-item>
-<app-blog-item [passedBlog]="passedBlog"></app-blog-item> -->
+<app-blog-item></app-blog-item>
+<app-blog-item></app-blog-item>
+<app-blog-item (actionEmitter)="executeAction($event)"></app-blog-item>
+<app-blog-item [passedBlog]="passedBlog"></app-blog-item>
 <div [ngSwitch]="num">
     <ng-container *ngFor="let data of nums">
         <div *ngSwitchCase="data">data</div>
@@ -15,3 +17,11 @@
 </div>
 
 <button (click)="changeNum()">Change Num</button>
+
+<!-- ATTRIBUTE DIRECTIVES -->
+<!-- ngStyle, ngClass, Custom -->
+<div [ngStyle]="{'width': width, 'height': height, 'background-color': color }">Test DIV</div>
+
+<div [ngClass]="{'card': true}">Using Class</div>
+<div [ngClass]="['card', 'class2', 'class3']"></div>
+<button (click)="changeCss()">Change</button>
