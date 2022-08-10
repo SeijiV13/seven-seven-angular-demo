@@ -1,0 +1,28 @@
+Folder structure
+-- DONE
+
+Component Interaction
+Input 
+Output 
+Services
+-- DONE
+
+Directives
+-- Directives
+Component Attribute Structural
+
+Routes (Basic)
+
+NPM install
+
+MVW
+Model View Whatever
+
+DUMB Component
+
+MODULES
+ - LOGIC OR FUNCRTIONALITY
+ - DATA 
+
+ SMART COMPONENT
+DUMB COMPONENT (PRESENTATIONAL COMPONENT)

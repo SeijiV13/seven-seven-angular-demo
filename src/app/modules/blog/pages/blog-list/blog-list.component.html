@@ -1,0 +1,17 @@
+<div *ngFor="let data of blogs; let i = index">
+    <app-blog-item *ngIf="data.published && data.authorActive " 
+    [blogItem]="data" 
+    (actionEmitter)="executeAction($event, i)"></app-blog-item>
+</div>
+<!-- <app-blog-item></app-blog-item>
+<app-blog-item></app-blog-item> -->
+<!-- <app-blog-item (actionEmitter)="executeAction($event)"></app-blog-item>
+<app-blog-item [passedBlog]="passedBlog"></app-blog-item> -->
+<div [ngSwitch]="num">
+    <ng-container *ngFor="let data of nums">
+        <div *ngSwitchCase="data">data</div>
+    </ng-container>
+    <div *ngSwitchDefault>None</div>
+</div>
+
+<button (click)="changeNum()">Change Num</button>
